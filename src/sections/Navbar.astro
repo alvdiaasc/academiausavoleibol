@@ -1,26 +1,129 @@
 ---
 ---
-
-<nav class="bg-white shadow-md">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+<!-- Navbar.astro -->
+<nav class="bg-white border-b border-gray-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+    <!-- Logo o nombre de la Academia -->
     <div class="flex-shrink-0">
-      <!-- Logo o Nombre del sitio -->
-      <a href="/" class="text-2xl font-bold text-blue-600">
-        MiEmpresa
+      <!-- Si tienes un logo, reemplázalo aquí. De lo contrario, usa texto -->
+      <a href="/" class="text-xl font-bold text-blue-600">
+        Academia USA Voleibol
       </a>
     </div>
-    <div>
-      <ul class="flex items-center space-x-4">
-        <li>
-          <a class="text-gray-700 hover:text-blue-600 transition-colors" href="/">Inicio</a>
-        </li>
-        <li>
-          <a class="text-gray-700 hover:text-blue-600 transition-colors" href="/productos">Productos</a>
-        </li>
-        <li>
-          <a class="text-gray-700 hover:text-blue-600 transition-colors" href="/contacto">Contacto</a>
-        </li>
-      </ul>
-    </div>
+
+    <!-- Menú principal, alineado a la derecha -->
+    <ul class="flex items-center space-x-6 font-medium">
+      <!-- Home -->
+      <li>
+        <a 
+          href="/" 
+          class="text-gray-700 hover:text-blue-600 transition-colors"
+        >
+          HOME
+        </a>
+      </li>
+
+      <!-- Mentorship -->
+      <li>
+        <a 
+          href="/mentorship" 
+          class="text-gray-700 hover:text-blue-600 transition-colors"
+        >
+          MENTORSHIP
+        </a>
+      </li>
+
+      <!-- Camps con submenú -->
+      <li class="relative group">
+        <!-- Botón principal del submenú -->
+        <button 
+          class="text-gray-700 hover:text-blue-600 transition-colors inline-flex items-center"
+        >
+          CAMPS
+          <!-- Icono ⌄ opcional -->
+          <svg 
+            class="ml-1 h-4 w-4 text-gray-500 group-hover:text-blue-600 transition-colors" 
+            fill="currentColor" 
+            viewBox="0 0 20 20"
+          >
+            <path 
+              fill-rule="evenodd" 
+              d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.27a.75.75 0 01.02-1.06z" 
+              clip-rule="evenodd" 
+            />
+          </svg>
+        </button>
+        <!-- Contenedor del submenú -->
+        <ul 
+          class="absolute left-0 mt-2 w-48 bg-white border border-gray-200 rounded shadow-md hidden group-hover:block"
+        >
+          <li>
+            <a 
+              href="/camps/about-camps"
+              class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-blue-600"
+            >
+              ABOUT OUR CAMPS
+            </a>
+          </li>
+          <li>
+            <a 
+              href="/camps/calendar"
+              class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-blue-600"
+            >
+              CAMP CALENDAR
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <!-- About con submenú -->
+      <li class="relative group">
+        <button 
+          class="text-gray-700 hover:text-blue-600 transition-colors inline-flex items-center"
+        >
+          ABOUT
+          <!-- Icono ⌄ opcional -->
+          <svg 
+            class="ml-1 h-4 w-4 text-gray-500 group-hover:text-blue-600 transition-colors" 
+            fill="currentColor" 
+            viewBox="0 0 20 20"
+          >
+            <path 
+              fill-rule="evenodd" 
+              d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.27a.75.75 0 01.02-1.06z" 
+              clip-rule="evenodd" 
+            />
+          </svg>
+        </button>
+        <ul 
+          class="absolute left-0 mt-2 w-48 bg-white border border-gray-200 rounded shadow-md hidden group-hover:block"
+        >
+          <li>
+            <a 
+              href="/about/about-us"
+              class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-blue-600"
+            >
+              ABOUT US
+            </a>
+          </li>
+          <li>
+            <a 
+              href="/about/avies-calendar"
+              class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-blue-600"
+            >
+              AVIE'S CALENDAR
+            </a>
+          </li>
+          <li>
+            <a 
+              href="/about/contact-us"
+              class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-blue-600"
+            >
+              CONTACT US
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
   </div>
 </nav>
