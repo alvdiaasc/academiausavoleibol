@@ -6,17 +6,41 @@ import Contact from '@/sections/Contact.astro';
 import Footer from '@/sections/Footer.astro';
 import Hero from '@/sections/Hero.astro';
 import Navbar from '@/sections/Navbar.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import TopBar from '@/sections/TopBar.astro';
 ---
 
-<Layout title='Academia USA Voleibol'>
-	<Hero />
-	<main>
-		<About />
-		<Camps />
-		<Contact />
-		<Footer />
-	</main>
-</Layout>
+<TopBar />
+<Navbar />
+<section
+  class="relative w-full h-[80vh] bg-cover bg-center bg-no-repeat flex items-center justify-center"
+  style="background-image: url('/images/neon-hero.jpg')"
+>
+  <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+
+  <div class="relative z-10 text-center text-white max-w-xl px-4">
+    <h1 class="text-4xl sm:text-5xl font-extrabold mb-4 neon-title">
+      ALL OUT VOLLEYBALL
+    </h1>
+    <p class="text-lg sm:text-xl text-gray-200 font-light mb-8">
+      
+    </p>
+    <a
+      href="/mentorship"
+      class="inline-block bg-neonPink px-6 py-3 rounded-full font-semibold hover:opacity-90 transition-opacity"
+    >
+      View Mentorship
+    </a>
+  </div>
+</section>
+
+<!-- Sección de contenido adicional -->
+<section class="bg-black text-white py-16">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl font-bold text-neonPink mb-6">About Our Program</h2>
+    <p class="text-gray-300">
+      All Out Volleyball is a program designed to help young athletes reach their full potential in the sport of volleyball. Our mentorship program is designed to help athletes develop their skills, learn the game, and prepare for the next level of competition. We offer a variety of programs for athletes of all ages and skill levels. Whether you are just starting out or looking to take your game to the next level, we have a program for you.
+    </p>
+  </div>
+</section>
+
+<Footer />

@@ -1,26 +1,49 @@
 ---
 ---
-
-<nav class="bg-white shadow-md">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
-    <div class="flex-shrink-0">
-      <!-- Logo o Nombre del sitio -->
-      <a href="/" class="text-2xl font-bold text-blue-600">
-        MiEmpresa
+<nav class="bg-brandBlack text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+      <!-- LOGO -->
+      <a href="/" class="flex items-center space-x-2">
+        <!-- Imagen del logo -->
+        <img src="/images/logo.png" alt="All Out Volleyball Logo" class="h-10 w-auto" />
+        <!-- Nombre del sitio (opcional) -->
+        <!-- <span class="text-xl font-bold">All Out Volleyball</span> -->
       </a>
-    </div>
-    <div>
-      <ul class="flex items-center space-x-4">
+  
+      <!-- MENÚ DE NAVEGACIÓN -->
+      <ul class="flex items-center space-x-8 font-medium">
         <li>
-          <a class="text-gray-700 hover:text-blue-600 transition-colors" href="/">Inicio</a>
+          <a href="/" class="hover:text-neonPink transition-colors">Home</a>
         </li>
         <li>
-          <a class="text-gray-700 hover:text-blue-600 transition-colors" href="/productos">Productos</a>
+          <a href="/mentorship" class="hover:text-neonPink transition-colors">Mentorship</a>
         </li>
-        <li>
-          <a class="text-gray-700 hover:text-blue-600 transition-colors" href="/contacto">Contacto</a>
+        <li class="relative group">
+          <!-- Camps con Submenú -->
+          <a href="/camps" class="hover:text-neonPink transition-colors">Camps</a>
+          <!-- EJEMPLO DE SUBMENÚ (opcional)
+          <ul
+            class="absolute left-0 mt-2 bg-brandBlack text-white border border-gray-700 p-2 hidden group-hover:block"
+          >
+            <li><a href="/camps/summer" class="block px-3 py-1 hover:text-neonPink">Summer Camp</a></li>
+            <li><a href="/camps/winter" class="block px-3 py-1 hover:text-neonPink">Winter Camp</a></li>
+          </ul>
+          -->
+        </li>
+        <li class="relative group">
+          <!-- About con Submenú -->
+          <a href="/about" class="hover:text-neonPink transition-colors">About</a>
+          <!-- Submenú opcional -->
+          <!-- 
+          <ul
+            class="absolute left-0 mt-2 bg-brandBlack text-white border border-gray-700 p-2 hidden group-hover:block"
+          >
+            <li><a href="/about/team" class="block px-3 py-1 hover:text-neonPink">Our Team</a></li>
+            <li><a href="/about/history" class="block px-3 py-1 hover:text-neonPink">History</a></li>
+          </ul>
+          -->
         </li>
       </ul>
     </div>
-  </div>
-</nav>
+  </nav>
+  
