@@ -1,83 +1,103 @@
----
----
-<nav class="bg-white border-b border-gray-200">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-    <!-- Logo -->
-    <div class="flex-shrink-0">
-      <a href="/" class="text-xl font-bold text-blue-600">
-        Academia USA Voleibol
-      </a>
-    </div>
+<nav class="bg-gradient-to-r from-blue-500 to-red-500 text-white relative z-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+    <a href="/" class="flex items-center space-x-2">
+      <img src="/public/logo.jpg" alt="All Out Volleyball Logo" class="h-10 w-auto" />
+    </a>
 
-    <!-- Menú principal -->
-    <ul class="flex items-center space-x-6 font-medium">
-      <!-- Home -->
+    <ul class="flex items-center space-x-8 font-medium">
       <li>
-        <a href="/" class="text-gray-700 hover:text-blue-600 transition-colors">
-          HOME
-        </a>
+        <a href="/" class="hover:text-neonPink transition-colors">INICIO</a>
       </li>
-
-      <!-- Mentorship -->
-      <li>
-        <a href="/mentor/mentorship" class="text-gray-700 hover:text-blue-600 transition-colors">
-          MENTORSHIP
+      <li class="relative">
+        <a 
+          href="/camps" 
+          class="submenu-toggle hover:text-neonPink transition-colors" 
+          data-target="submenu-camps"
+        >
+          CLINICS
         </a>
-      </li>
-
-      <!-- Camps -->
-      <li class="relative group">
-        <button class="text-gray-700 hover:text-blue-600 transition-colors inline-flex items-center">
-          CAMPS
-          <!-- Icono ▾ (opcional) -->
-          <svg class="ml-1 h-4 w-4 text-gray-500 group-hover:text-blue-600 transition-colors" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.27a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
-          </svg>
-        </button>
-        <ul class="absolute left-0 mt-2 w-48 bg-white border border-gray-200 rounded shadow-md hidden group-hover:block group-focus:block">
+        <ul 
+          id="submenu-camps" 
+          class="absolute left-0 mt-2 bg-brandBlack text-white border border-gray-700 p-2 rounded-lg shadow-lg hidden"
+        >
           <li>
-            <a href="/camps/about-camps" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-blue-600">
-              ABOUT OUR CAMPS
+            <a href="/camps/summer" class="block px-3 py-1 hover:text-neonPink">
+              SOBRE LOS CLINICS
             </a>
           </li>
           <li>
-            <a href="/camps/calendar" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-blue-600">
-              CAMP CALENDAR
+            <a href="/camps/winter" class="block px-3 py-1 hover:text-neonPink">
+              CALENDARIO
             </a>
           </li>
         </ul>
       </li>
-
-      <!-- About -->
-      <li class="relative group">
-        <button class="text-gray-700 hover:text-blue-600 transition-colors inline-flex items-center">
-          ABOUT
-          <!-- Icono ▾ (opcional) -->
-          <svg class="ml-1 h-4 w-4 text-gray-500 group-hover:text-blue-600 transition-colors" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.27a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
-          </svg>
-        </button>
-        <ul class="absolute mt-2 w-48 bg-white border border-gray-200 rounded shadow-md hidden group-hover:block group-focus:block">
-          <!-- Nuevo Enlace: Sobre Avie Niece -->
+      <li class="relative">
+        <a 
+          href="/about" 
+          class="submenu-toggle hover:text-neonPink transition-colors" 
+          data-target="submenu-about"
+        >
+          INFORMACION
+        </a>
+        <ul 
+          id="submenu-about" 
+          class="absolute left-0 mt-2 bg-brandBlack text-white border border-gray-700 p-2 rounded-lg shadow-lg hidden"
+        >
           <li>
-            <a href="/about/avie-niece" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-blue-600">
-              ABOUT AVIE
+            <a href="/about/team" class="block px-3 py-1 hover:text-neonPink">
+              NUESTRO EQUIPO
             </a>
           </li>
-          <!-- Nuevo Enlace: Clínics y Academia USA Voleibol -->
           <li>
-            <a href="/about/clinics" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-blue-600">
-              CLINICS ACADEMY
+            <a href="/about/history" class="block px-3 py-1 hover:text-neonPink">
+              SOBRE AUSAVB
             </a>
           </li>
-          <!-- Nuevo Enlace: Formulario de Aceptación -->
           <li>
-            <a href="/about/risk-form" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-blue-600">
-              RISK FORM
+            <a href="/about/history" class="block px-3 py-1 hover:text-neonPink">
+              CALENDARIO DE AVIE
+            </a>
+          </li>
+          <li>
+            <a href="/about/history" class="block px-3 py-1 hover:text-neonPink">
+              CONTACTO
             </a>
           </li>
         </ul>
       </li>
     </ul>
   </div>
+
 </nav>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const toggles = document.querySelectorAll('.submenu-toggle');
+    toggles.forEach(toggle => {
+      toggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('data-target');
+        const submenu = document.getElementById(targetId);
+
+        // Cerrar cualquier otro submenú abierto
+        toggles.forEach(otherToggle => {
+          const otherTargetId = otherToggle.getAttribute('data-target');
+          if(otherTargetId !== targetId) {
+            const otherSubmenu = document.getElementById(otherTargetId);
+            if(otherSubmenu && !otherSubmenu.classList.contains('hidden')) {
+              otherSubmenu.classList.add('hidden');
+            }
+          }
+        });
+
+        // Alternar visibilidad del submenú actual
+        if (submenu) {
+          submenu.classList.toggle('hidden');
+        }      
+      });
+    });
+  });
+</script>
+
+

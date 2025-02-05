@@ -1,8 +1,20 @@
 /** @type {import('tailwindcss').Config} */
-export default {
-	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+module.exports = {
+	content: [
+	  "./src/**/*.{astro,html,js,jsx,ts,tsx}",
+	  "./public/**/*.{html,svg}",
+	],
 	theme: {
-		extend: {},
+	  extend: {
+		colors: {
+		  neonPink: "#ff00ff",
+		  neonPurple: "#b734eb",
+		  neonBlue: "#00ffff",
+		  brandGreen: "#1eb300", 
+		  brandBlack: "#0b0b0b",
+		},
+	  },
 	},
 	plugins: [],
-}
+  }
+  
