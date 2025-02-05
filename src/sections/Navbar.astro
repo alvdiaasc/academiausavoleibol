@@ -68,9 +68,7 @@
       </li>
     </ul>
   </div>
-
 </nav>
-
 <script>
   document.addEventListener("DOMContentLoaded", function() {
     const toggles = document.querySelectorAll('.submenu-toggle');
@@ -84,9 +82,11 @@
         toggles.forEach(otherToggle => {
           const otherTargetId = otherToggle.getAttribute('data-target');
           if(otherTargetId !== targetId) {
-            const otherSubmenu = document.getElementById(otherTargetId);
-            if(otherSubmenu && !otherSubmenu.classList.contains('hidden')) {
-              otherSubmenu.classList.add('hidden');
+            if (otherTargetId) {
+              const otherSubmenu = document.getElementById(otherTargetId);
+              if(otherSubmenu && !otherSubmenu.classList.contains('hidden')) {
+                otherSubmenu.classList.add('hidden');
+              }
             }
           }
         });
@@ -98,6 +98,7 @@
       });
     });
   });
+  
 </script>
 
 
